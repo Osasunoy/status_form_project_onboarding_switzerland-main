@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1> Onboarding Status</h1>
+
+
+    
+    <form id="filter-form">
+        <label for="banker">Banker:*</label>
+        <select id="banker" name="banker_id" onchange="fetchClients()">
+            <option value="">Select Banker</option>
+            <!-- options de banker js -->
+        </select>
+
+        <label for="client">Client:</label>
+        <select id="client" name="client_id" disabled>
+            <option value="">Select Client</option>
+            <!-- options de client js -->
+        </select>
+
+        <button type="button" onclick="getStatus()">Get Status</button>
+    </form>
+
+    <h2>Status Form</h2>
+    <table id="status-table">
+        <thead>
+            <tr>
+                <th>Form</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- status dos form -->
+        </tbody>
+    </table>
+
+    <script src="/static/js/scripts.js"></script>
+{% endblock %}
+
+
