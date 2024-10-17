@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- página inicial -->
+    <div id="page1">
+        <link rel="stylesheet" href="/onboarding_page_version01/static/css/styles.css">
+        <h1>Project Onboarding</h1>
+        <div class="center-buttons">
+            <a href="{{ register_link }}" class="button" target="_blank">Register New</a>
+            <a href="/status" class="button">Consult</a>
+        </div>    
+    </div>
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+{% endblock %}
